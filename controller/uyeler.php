@@ -8,8 +8,7 @@ class Uyeler extends Controller{
         $usersModel = $this->model('users');
         $users = $usersModel->getAllUsers();
         $this->view('uyeler', [
-            'users' => $users
-         ]
+            'users' => $users]
         );
     }
     public function post(){
