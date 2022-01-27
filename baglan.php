@@ -1,34 +1,26 @@
 <?php
 
-class Database{
+echo "Bağlantı test sayfası" .'<br>';
 
-    protected $db;
 
-    public function __construct(){
-
-        try{
-            
+try{
             $veritabani = "deneme";    
             $kullaniciAdi = "root";  
-            $sifre = "";
+            $sifre = "root";
 
-            $connection_string = "mysql:host=localhost;dbname=deneme";
             $connection = null;
                  
-            $connection  = new PDO($connection_string,$kullaniciAdi,$sifre);
+            $connection  = new PDO("mysql:host=localhost;dbname=deneme",'root','');
 
             if ($connection) {
                 echo "Connected Successfully!". "<br>";
-                $this->db = $connection;
             } else {
                 echo "Connection Failed!" ."<br>";
             }
 
-            
         }catch(PDOException $ex){
             echo "<br>";
             echo $ex->getMessage();
         }
-        
-    }
-}
+
+?>

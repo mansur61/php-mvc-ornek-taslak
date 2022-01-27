@@ -15,9 +15,9 @@
      </form>
 
     <ul>
-            <?php foreach ($users as $users): ?>
+            <?php foreach ($users as $user): ?>
                 <li>
-                    <?= $users['name'] ?>
+                    <?= $user['name'] ?>
                 </li>
              <?php endforeach ?>
     </ul>
